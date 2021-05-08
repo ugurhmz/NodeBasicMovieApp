@@ -1,0 +1,12 @@
+<%- include ('include/_header') %> 
+
+<div class="container">
+    <h1 class="text-center search1">Movies Search</h1>
+
+    <form action="/results" method="GET" class="justify-content-center  d-flex">
+        <input type="text" name="search" placeholder="Searching.." class="form-control w-25">
+        <button class="btn btn-success ml-1 text-center">Search</button>
+    </form>
+</div>
+
+<%- include ('include/_footer.ejs') %> 

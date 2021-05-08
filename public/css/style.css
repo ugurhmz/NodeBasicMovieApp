@@ -1,0 +1,26 @@
+
+:root {
+    --dark : #2f324e;
+    --light :#adb5bd;
+    --border:#dee2e6;
+    --border-btn:#edf2f4;
+
+}
+
+
+.search1 {
+    margin-top:20%;
+    color:var(--border);
+    margin-bottom:1rem;
+}
+
+body {
+    background-color:var(--dark);
+
+}
+
+
+.movieNameh1 {
+    margin:3% 0;
+    color:var(--border);
+}
