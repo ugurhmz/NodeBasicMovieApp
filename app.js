@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const path = require('path')
 require('dotenv').config()
+const request = require('request')
 
 const PORT = process.env.PORT
 
@@ -19,8 +20,28 @@ app.get('/', (req,res) => {
 })
 
 
-app.get('/movies', (req,res) => {
-    res.render('movies')
+app.get('/results', (req,res) => {
+    
+    const query = req.query.search
+
+    //we can use Axios... 
+    request('https://api.themoviedb.org/3/search/movie?api_key=6fe8370265c396656c58d7dd9ff3e712&query='+query,(error,response,body) => {
+
+        if(error){
+            console.log(error)
+        }
+
+        let data = JSON.parse(body)
+        
+
+        res.render('movies', {
+            data:data,
+            searchQuery:query
+        })
+
+
+    })
+
 })
 
 

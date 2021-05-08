@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 
 :root {
     --dark : #2f324e;
@@ -23,4 +24,26 @@ body {
 .movieNameh1 {
     margin:3% 0;
     color:var(--border);
+    font-family: 'Courgette', cursive;
+}
+
+.card-img {
+    height:28rem;
+    object-fit:fill;
+    border:1px solid black;
+    margin-right:0;
+
+}
+
+.myborder {
+    border:1px solid var(--dark);
+    border-radius: .2em;
+    box-shadow:2px  5px 5px #7bacdd;
+}
+
+.nav-link {
+    list-style-type:none;
+    font-size:1.3rem;
+    color:var(--border);
+    margin-left:5%;
 }
